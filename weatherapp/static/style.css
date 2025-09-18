@@ -1,0 +1,121 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Full-screen scenic background with dark overlay */
+body {
+    background:
+        linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+        url("https://images.unsplash.com/photo-1501973801540-537f08ccae7b?auto=format&fit=crop&w=1920&q=80")
+        center/cover no-repeat;
+    min-height: 100vh;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px 20px;
+}
+
+/* Main container to center all content */
+.container {
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+}
+
+/* App title */
+.container h1 {
+    font-size: 3rem;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+}
+
+/* Search form styling */
+form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 40px;
+}
+
+form input[type="text"] {
+    padding: 10px 15px;
+    width: 220px;
+    border: none;
+    border-radius: 6px;
+    background: rgba(255,255,255,0.85);
+    color: #333;
+    font-size: 1rem;
+    outline: none;
+}
+
+form button {
+    padding: 10px 20px;
+    background: #ff9800;
+    border: none;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+form button:hover {
+    background: #e68900;
+}
+
+/* Weather information card */
+.weather {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 16px;
+    padding: 20px 30px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+    backdrop-filter: blur(6px);  /* glassy effect */
+}
+
+/* Left side temperature & city */
+.weather .left h2 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+.weather .left h3 {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+/* Right side: icon and condition */
+.weather .right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.weather .condition p {
+    margin: 5px 0;
+    font-size: 1.1rem;
+}
+
+/* Responsive tweaks for smaller screens */
+@media (max-width: 600px) {
+    form {
+        flex-direction: column;
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto 40px;
+    }
+    form input[type="text"] {
+        width: 100%;
+    }
+    .weather {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+}
+
